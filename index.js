@@ -23,6 +23,8 @@ function main() {
       - remove [email]: Remove a student by email
       - display: Show all students
       - find [email]: Find a student by email
+      // - findBySpecialization [specialization]: displays student by the given specialization
+      // - filterByMinYear [year]
       - save: Save the current linked list to the specified file
       - load [fileName]: Load a linked list from a file
       - clear: Clear the current linked list
@@ -113,9 +115,8 @@ async function handleCommand(command) {
       } else {
         console.log(studentList);
       }
-
-      // --------> WRITE YOUR CODE ABOVE
       break;
+    // --------> WRITE YOUR CODE ABOVE
 
     case "find":
       /**
@@ -146,6 +147,22 @@ async function handleCommand(command) {
       }
       break;
     // --------> WRITE YOUR CODE ABOVE
+    // case "findBySpecialization":
+
+    //   console.log("finding Student...");
+    //   let studentSpecialization =args[0];
+    //   let filteredStudents = studentManagementSystem.filterBySpecialization(studentSpecialization)
+    //   console.log(filteredStudents);
+    //   break;
+
+    // case "filterByMinYear":
+
+    //    console.log("Filtering students...");
+    //    let minimunYear = args[0];
+
+    //    let fitleredStudentsByYear = studentManagementSystem.filterByMinYear(minimunYear)
+    //    console.log(fitleredStudentsByYear);
+    //    break;
 
     case "save":
       /**

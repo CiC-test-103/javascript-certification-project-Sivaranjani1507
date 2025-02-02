@@ -108,9 +108,27 @@
     "specialization": "computerScience"
   },
   {
-    "name": "siva",
-    "year": "2",
-    "email": "siva@gmail.com",
-    "specialization": "cs"
+    "name": "Arun",
+    "year": "3",
+    "email": "arun@gmail.com",
+    "specialization": "environmentalScience"
+  },
+  {
+    "name": "Tamil",
+    "year": "5",
+    "email": "tamil@gmail.com",
+    "specialization": "computerScience"
+  },
+  {
+    "name": "Naman",
+    "year": "5",
+    "email": "naman@gmail.com",
+    "specialization": "computerScience"
+  },
+  {
+    "name": "Abi",
+    "year": "3",
+    "email": "abi@gmail.com",
+    "specialization": "math"
   }
 ]
