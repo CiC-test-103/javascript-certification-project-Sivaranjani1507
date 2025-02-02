@@ -208,12 +208,12 @@ class LinkedList {
 
     while (current) {
       if (current.data.getYear() >= minYear) {
-        filteredStudentsByMinYear.push(current.data.getname());
+        filteredStudentsByMinYear.push(current.data);
       }
       current = current.next;
     }
 
-    filteredStudentsByMinYear.sort();
+    filteredStudentsByMinYear.sort((a,b) => a.getName().localeCompare(b.getName()));
 
     return filteredStudentsByMinYear;
   }
