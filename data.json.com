@@ -130,11 +130,5 @@
     "year": "3",
     "email": "k@gmail.com",
     "specialization": "math"
-  },
-  {
-    "name": "Arul",
-    "year": "3",
-    "email": "ar@gmail.com",
-    "specialization": "Music"
   }
 ]

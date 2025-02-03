@@ -149,18 +149,19 @@ class LinkedList {
     return studentsString;
   }
 
-  #sortStudentsByName() {
-    let current = this.head;
-    let sorted = [];
-
-    while (current) {
-      sorted.push(current.data);
-      current = current.next;
-    }
-
-    sorted.sort((a, b) => a.name().localecompare(b.name()));
-
-    return sorted;
+  #sortStudentsByName(studentArray) {
+    return studentArray.sort((a, b) => {
+      let nameA = a.getName();
+      let nameB = b.getName();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
   }
 
   /**
@@ -187,10 +188,7 @@ class LinkedList {
       }
       current = current.next;
     }
-
-    filteredStudentsBySpecialization.sort((a,b) => a.getName()-b.getName());
-
-    return filteredStudentsBySpecialization;
+    return this.#sortStudentsByName(filteredStudentsBySpecialization);
   }
 
   /**
@@ -208,15 +206,12 @@ class LinkedList {
 
     while (current) {
       if (current.data.getYear() >= minYear) {
-        filteredStudentsByMinYear.push(current.data.getName());
+        filteredStudentsByMinYear.push(current.data);
       }
 
       current = current.next;
     }
-
-    filteredStudentsByMinYear.sort();
-
-    return filteredStudentsByMinYear;
+    return this.#sortStudentsByName(filteredStudentsByMinYear);
   }
 
   /**

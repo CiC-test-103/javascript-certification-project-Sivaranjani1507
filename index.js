@@ -148,21 +148,21 @@ async function handleCommand(command) {
       break;
     // --------> WRITE YOUR CODE ABOVE
     case "findBySpecialization":
-
       console.log("Finding Student...");
-      let studentSpecialization =args[0];
-      let filteredStudents = studentManagementSystem.filterBySpecialization(studentSpecialization)
-      console.log(filteredStudents);
+      let studentSpecialization = args[0];
+      let filteredStudents = studentManagementSystem.filterBySpecialization(
+        studentSpecialization
+      );
+      console.log(filteredStudents.map((student) => student.getName()));
       break;
 
     case "filterByMinYear":
-
-       console.log("Filtering students...");
-       let minimunYear = args[0];
-
-       let fitleredStudentsByYear = studentManagementSystem.filterByMinYear(minimunYear)
-       console.log(fitleredStudentsByYear);
-       break;
+      console.log("Filtering students...");
+      let minimunYear = args[0];
+      let fitleredStudentsByYear =
+        studentManagementSystem.filterByMinYear(minimunYear);
+      console.log(fitleredStudentsByYear.map((student) => student.getName()));
+      break;
 
     case "save":
       /**
