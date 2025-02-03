@@ -158,7 +158,7 @@ class LinkedList {
       current = current.next;
     }
 
-    sorted.sort((a, b) => a.name().localcompare(b.name()));
+    sorted.sort((a, b) => a.name().localecompare(b.name()));
 
     return sorted;
   }
@@ -183,12 +183,12 @@ class LinkedList {
 
     while (current) {
       if (current.data.getSpecialization() === specialization) {
-        filteredStudentsBySpecialization.push(current.data.getName());
+        filteredStudentsBySpecialization.push(current.data);
       }
       current = current.next;
     }
 
-    filteredStudentsBySpecialization.sort();
+    filteredStudentsBySpecialization.sort((a,b) => a.getName()-b.getName());
 
     return filteredStudentsBySpecialization;
   }
@@ -208,12 +208,13 @@ class LinkedList {
 
     while (current) {
       if (current.data.getYear() >= minYear) {
-        filteredStudentsByMinYear.push(current.data);
+        filteredStudentsByMinYear.push(current.data.getName());
       }
+
       current = current.next;
     }
 
-    filteredStudentsByMinYear.sort((a,b) => a.getName().localeCompare(b.getName()));
+    filteredStudentsByMinYear.sort();
 
     return filteredStudentsByMinYear;
   }

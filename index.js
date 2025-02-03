@@ -149,7 +149,7 @@ async function handleCommand(command) {
     // --------> WRITE YOUR CODE ABOVE
     case "findBySpecialization":
 
-      console.log("finding Student...");
+      console.log("Finding Student...");
       let studentSpecialization =args[0];
       let filteredStudents = studentManagementSystem.filterBySpecialization(studentSpecialization)
       console.log(filteredStudents);
